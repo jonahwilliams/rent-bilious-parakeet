@@ -2,7 +2,7 @@
 let fs = require('fs');
 let express = require('express');
 let app = express();
-
+let port = process.env.PORT || 8080;
 const e = require('./engine');
 
 /*
@@ -33,4 +33,4 @@ app.get('/rent/:date/:rent', (req, res) => {
 });
 
 
-app.listen(8080, () => console.log(`listening on port 8080`));
+app.listen(port, () => console.log(`listening on port ${port}`));
